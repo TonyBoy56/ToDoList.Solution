@@ -4,8 +4,8 @@ namespace ToDoList.Models
 {
   public class Item
   {
-    public string Description {get; set;}
-    private static List<Item> _instances = new List<Item> {};
+    public string Description { get; set; }
+    private static List<Item> _instances = new List<Item> { };
 
     public Item(string description)
     {
@@ -21,6 +21,17 @@ namespace ToDoList.Models
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public static void RemoveItem(int index)
+    {
+      _instances.RemoveAt(index);
+
+    }
+    public static void UpdateItem(int index, string input)
+    {
+      _instances[index].Description = input;
+
     }
   }
 }
