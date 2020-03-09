@@ -1,4 +1,2 @@
-ToDoList.Tests/obj
-ToDoList.Tests/bin
-ToDoList/bin
-ToDoList/obj
+*/obj/
+*/bin/
