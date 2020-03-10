@@ -8,7 +8,6 @@ namespace ToDoList.Models
     public string Priority { get; set; }
     private static List<Item> _instances = new List<Item> { };
 
-    
     public Item(string description)
     {
       Description = description;
