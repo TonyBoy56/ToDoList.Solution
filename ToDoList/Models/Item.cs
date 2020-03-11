@@ -7,11 +7,13 @@ namespace ToDoList.Models
     public string Description { get; set; }
     public string Priority { get; set; }
     private static List<Item> _instances = new List<Item> { };
+    public int Id { get; }
 
     public Item(string description)
     {
       Description = description;
       _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public Item(string description, string priority)
@@ -39,6 +41,11 @@ namespace ToDoList.Models
     {
       _instances[index].Description = input;
 
+    }
+
+    public static Item Find(int searchId)
+    {
+      return _instances[searchId-1];
     }
   }
 }
